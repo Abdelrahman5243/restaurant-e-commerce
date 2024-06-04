@@ -1,42 +1,68 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
+/* =========== google fonts =========== */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap");
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* ======== base style ======= */
+:root{
+  --website-6-color-1-dark:#0a071a;
+  --website-6-color-1-light:#141124;
+  --website-6-color-2-dark:#f76e11;
+  --website-6-color-2-light:#f5b70a;
+  --black: #000;
+  --white:#fff;
+  --gray:#c4c4c4;
+  --icon-1:#2ace92;
+  --icon-2:#7865ff;
   }
-  to {
-    transform: rotate(360deg);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+
+body,
+html {
+  background: #0a071a;
+}
+
+section,
+footer {
+  padding: 70px 0px;
+}
+
+h1,
+h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  color: #f5b70a;
+}
+
+p {
+  font-size: 1rem;
+  color: #c4c4c4;
+  line-height: 30px;
+  font-family: "Rubik", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+i {
+  color: #fff;
+}
+
+@media only screen and (max-width: 767px) {
+  section {
+    padding: 40px 0px;
   }
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+.logo-icon{
+  width: 120px;
 }
