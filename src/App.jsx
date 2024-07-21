@@ -8,15 +8,17 @@ import ChooseUs from "./components/choose-us/ChooseUs";
 import MenuPack from "./components/menu-pack/MenuPack";
 import Download from "./components/download-section/Download";
 import Footer from "./components/footer/Footer";
+import Cart from "./components/cart/Cart"
 
 function App() {
   return (
     <>
       <Header />
-      <div style={{ margin: '105px 0' }}>
+      <div style={{ margin: '105px 0' ,minHeight:"290px"}}>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<ChooseUs />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/about" element={<ChooseUs />} />
           <Route path="/menu" element={<PopularMenu />} />
           <Route path="/recipes" element={<MenuPack />} />
           <Route path="/contact" element={<Download />} />

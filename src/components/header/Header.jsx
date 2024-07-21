@@ -1,8 +1,9 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef,useContext } from "react";
 import { Link } from 'react-router-dom';
 import "./header.css";
 import { Container } from "reactstrap";
 import logo from "../../assets/images/logo.png";
+import CartContext from '../../context/CartContext';
 
 const navLinks = [
   {
@@ -30,6 +31,7 @@ const navLinks = [
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef();
+  const { cartItems } = useContext(CartContext);
 
   const menuToggle = () => setIsMenuOpen(!isMenuOpen);
 
@@ -54,12 +56,12 @@ const Header = () => {
     <header className="header">
       <Container>
         <div className="navigation">
-          <div className="logo">
+          <Link className="logo" to={"/"}>
             <span className="d-flex align-items-center gap-1">
               <i className="ri-restaurant-2-line"></i>
               <img src={logo} alt="logo" className="logo-icon" />
             </span>
-          </div>
+          </Link>
 
           {isMenuOpen && (
             <div className="nav__menu">
@@ -95,10 +97,10 @@ const Header = () => {
 
 
           <div>
-            <span className="cart__icon">
+            <Link className="cart__icon" to={"/cart"}>
               <i className="ri-shopping-basket-line"></i>
-              <span className="badge">2</span>
-            </span>
+              <span className="badge">{cartItems.length}</span>
+            </Link>
           </div>
 
           <div className="mobile__menu">
