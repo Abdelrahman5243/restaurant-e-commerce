@@ -82,7 +82,9 @@ const Header = () => {
                 <ul className="nav__list_mobile">
                   {navLinks.map((item, index) => (
                     <li className="nav__item" key={index}>
-                      <Link to={`/${item.url}`}> {item.display}</Link>
+                      <Link to={`/${item.url}`} onClick={menuToggle}>
+                        {item.display}
+                      </Link>
                     </li>
                   ))}
                 </ul>
