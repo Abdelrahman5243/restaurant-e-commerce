@@ -5,8 +5,8 @@ import { download } from "./downloadData";
 const Download = () => {
   return (
     <section>
-      <div className="app__container container mx-auto px-4" id="Contact">
-        <div className="flex flex-wrap">
+      <div className="container mx-auto px-4" id="Contact">
+        <div className="app__container flex flex-wrap">
           <div className="w-full md:w-1/2 mb-4 md:mb-0">
             <div className="app__img">
               <img
@@ -19,7 +19,7 @@ const Download = () => {
           </div>
 
           <div className="w-full md:w-1/2">
-            <div className="app__content">
+            <div className="app__content px-4">
               <h5 className="text-xl font-medium">{download.title}</h5>
               <h2 className="mb-4 text-2xl font-bold">
                 {download.description}
