@@ -67,7 +67,7 @@ i {
   width: 120px;
 }
 
-button:not(.filter-btn,.slick-arrow) {
+button:not(.filter-btn,.slick-arrow,.btn__google,.btn__apple) {
   border-radius: 8px;
   padding: 0.6em 1.2em;
   font-size: 1em;
@@ -82,7 +82,7 @@ button:not(.filter-btn,.slick-arrow) {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-}
-button:not(.filter-btn,.slick-arrow):hover {
+  &:hover {
   background: var(--website-6-color-2-light);
+}
 }
