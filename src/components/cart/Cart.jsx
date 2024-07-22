@@ -11,7 +11,7 @@ const Cart = () => {
   const totalPrice = cartItems.reduce((total, item) => total + item.price, 0);
 
   return (
-    <div className="container mx-auto px-8">
+    <div className="container mx-auto px-4">
       <div className="flex flex-wrap -mx-4">
         <div className="w-full mb-5 px-4">
           <h2 className="popular__menu-title text-2xl font-bold">

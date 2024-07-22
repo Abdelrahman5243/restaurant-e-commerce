@@ -36,7 +36,7 @@ const MenuPack = () => {
 
   return (
     <section id="Recipes" className="py-8">
-      <div className="container mx-auto px-8">
+      <div className="container mx-auto px-4">
         <div className="text-center mb-4">
           <h3 className="menu__title text-3xl font-bold">Our Menu Pack</h3>
         </div>

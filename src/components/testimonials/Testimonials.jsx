@@ -16,7 +16,7 @@ const Testimonials = () => {
   };
   return (
     <section className="design-6">
-      <div className="container mx-auto px-8">
+      <div className="container mx-auto px-4">
         <div className="flex flex-wrap justify-center">
           <div className="w-full sm:w-11/12 md:w-11/12 lg:w-8/12 mx-auto">
             <div className="slider__wrapper flex items-center gap-8">

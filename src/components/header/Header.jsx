@@ -53,7 +53,7 @@ const Header = () => {
 
   return (
     <header className="header">
-      <div className="container mx-auto px-8">
+      <div className="container mx-auto px-4">
         <div className="navigation">
           <Link className="logo" to={"/"}>
             <span className="flex items-center gap-1">

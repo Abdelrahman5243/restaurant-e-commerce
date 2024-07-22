@@ -5,7 +5,7 @@ import { chooseUS } from "./choose-usData";
 const ChooseUs = () => {
   return (
     <section id="About">
-      <div className="container mx-auto px-8">
+      <div className="container mx-auto px-4">
         <div className="flex flex-wrap -mx-4">
           <div className="w-full md:w-1/2 px-4 mb-8">
             <img loading="lazy" src={chooseUS.imgUrl} alt="" className="w-full" />

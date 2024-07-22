@@ -5,7 +5,7 @@ import { download } from "./downloadData";
 const Download = () => {
   return (
     <section>
-      <div className="app__container container mx-auto px-8" id="Contact">
+      <div className="app__container container mx-auto px-4" id="Contact">
         <div className="flex flex-wrap">
           <div className="w-full md:w-1/2 mb-4 md:mb-0">
             <div className="app__img">
