@@ -1,22 +1,22 @@
-import React, { useContext } from 'react';
-import './product-card.css';
-import CartContext from '../../context/CartContext';
+import React, { useContext } from "react";
+import "./product-card.css";
+import CartContext from "../../context/CartContext";
 
 const ProductCard = (props) => {
   const { title, imgUrl, price } = props.item;
   const { addItem, removeItem, cartItems } = useContext(CartContext);
 
   // Check if the item is in the cart
-  const isInCart = cartItems.some(item => item.id === props.item.id);
+  const isInCart = cartItems.some((item) => item.id === props.item.id);
 
   return (
     <div className="single__product">
       <div className="product__img">
-        <img loading="lazy" src={imgUrl} alt={title} className="w-100" />
+        <img loading="lazy" src={imgUrl} alt={title} className="w-full" />
       </div>
 
       <div className="product__content">
-        <div className="rating text-center">
+        <div className="rating text-center flex justify-center space-x-1">
           <span>
             <i className="ri-star-s-fill"></i>
           </span>
@@ -34,10 +34,10 @@ const ProductCard = (props) => {
           </span>
         </div>
 
-        <h6>{title}</h6>
+        <h6 className="text-lg font-semibold">{title}</h6>
 
-        <div className="d-flex align-items-center justify-content-between">
-          <span className="price d-flex align-items-center">
+        <div className="flex items-center justify-between">
+          <span className="price flex items-center">
             Price: $<span>{price}</span>
           </span>
           <button
@@ -46,7 +46,11 @@ const ProductCard = (props) => {
               isInCart ? removeItem(props.item.id) : addItem(props.item);
             }}
           >
-            <i className={isInCart ? "ri-delete-bin-line" : "ri-shopping-cart-line"}></i>
+            <i
+              className={
+                isInCart ? "ri-delete-bin-line" : "ri-shopping-cart-line"
+              }
+            ></i>
           </button>
         </div>
       </div>

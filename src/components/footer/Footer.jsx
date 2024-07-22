@@ -1,75 +1,87 @@
 import React from "react";
 import "./footer.css";
-import { Container, Row, Col, ListGroup, ListGroupItem } from "reactstrap";
 import { footer } from "./footerData";
 import logo from "../../assets/images/logo.png";
-
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer__top">
-        <Container>
-          <Row>
-            <Col lg="4" md="4" sm="6">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-wrap">
+            <div className="w-full mb-8">
               <div className="logo">
-                <h2 className=" d-flex align-items-center gap-1 mb-4">
+                <h2 className="flex items-center gap-1 mb-4">
                   <span>
                     <i className="ri-restaurant-2-line"></i>
-                  </span>{" "}
+                  </span>
                   <img src={logo} alt="" className="logo-icon" />
                 </h2>
                 <p>{footer.description}</p>
               </div>
-            </Col>
+            </div>
 
-            <Col lg="3" md="4" sm="6">
-              <h5 className="footer__link-title">{footer.infoLinks.title}</h5>
-
-              <ListGroup>
+            <div className="w-full md:w-1/2 lg:w-1/4 mb-4">
+              <h5 className="footer__link-title text-xl font-semibold">
+                {footer.infoLinks.title}
+              </h5>
+              <ul>
                 {footer.infoLinks.content.map((item, index) => (
-                  <ListGroupItem key={index} className="link__item">
-                    <a href="#links">{item}</a>
-                  </ListGroupItem>
+                  <li key={index} className="link__item mb-2">
+                    <a href="#links" className="text-blue-500 hover:underline">
+                      {item}
+                    </a>
+                  </li>
                 ))}
-              </ListGroup>
-            </Col>
+              </ul>
+            </div>
 
-            <Col lg="2" md="4" sm="6">
-              <h5 className="footer__link-title">{footer.quickLinks.title}</h5>
-
-              <ListGroup>
+            <div className="w-full md:w-1/2 lg:w-1/4 mb-4">
+              <h5 className="footer__link-title text-xl font-semibold">
+                {footer.quickLinks.title}
+              </h5>
+              <ul>
                 {footer.quickLinks.content.title.map((item, index) => (
-                  <ListGroupItem key={index} className="link__item">
-                    <a href={footer.quickLinks.content.link[index]}>{item}</a>
-                  </ListGroupItem>
+                  <li key={index} className="link__item mb-2">
+                    <a
+                      href={footer.quickLinks.content.link[index]}
+                      className="text-blue-500 hover:underline"
+                    >
+                      {item}
+                    </a>
+                  </li>
                 ))}
-              </ListGroup>
-            </Col>
+              </ul>
+            </div>
 
-            <Col lg="3" md="4" sm="6">
-              <h5 className="footer__link-title">{footer.contact.title}</h5>
-              <ListGroup>
-                {footer.contact.contentInfo.map((item,index) => (
-                  <ListGroupItem key={index} className="link__item d-flex align-items-center gap-3"> 
+            <div className="w-full md:w-1/2 lg:w-1/4 mb-4">
+              <h5 className="footer__link-title text-xl font-semibold">
+                {footer.contact.title}
+              </h5>
+              <ul>
+                {footer.contact.contentInfo.map((item, index) => (
+                  <li
+                    key={index}
+                    className="link__item flex items-center gap-3 mb-2"
+                  >
                     <i className={item.icon}></i>
                     {item.title}
-                  </ListGroupItem>
+                  </li>
                 ))}
-              </ListGroup>
-            </Col>
-          </Row>
-        </Container>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div className="footer__bottom">
-        <Container>
-          <Row>
-            <Col lg="12">
+        <div className="container mx-auto px-8">
+          <div className="flex">
+            <div className="w-full text-center">
               <p>{footer.copyright}</p>
-            </Col>
-          </Row>
-        </Container>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
   );

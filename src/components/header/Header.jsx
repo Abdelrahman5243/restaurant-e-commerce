@@ -1,9 +1,8 @@
-import React, { useState, useEffect, useRef,useContext } from "react";
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect, useRef, useContext } from "react";
+import { Link } from "react-router-dom";
 import "./header.css";
-import { Container } from "reactstrap";
 import logo from "../../assets/images/logo.png";
-import CartContext from '../../context/CartContext';
+import CartContext from "../../context/CartContext";
 
 const navLinks = [
   {
@@ -54,10 +53,10 @@ const Header = () => {
 
   return (
     <header className="header">
-      <Container>
+      <div className="container mx-auto px-8">
         <div className="navigation">
           <Link className="logo" to={"/"}>
-            <span className="d-flex align-items-center gap-1">
+            <span className="flex items-center gap-1">
               <i className="ri-restaurant-2-line"></i>
               <img src={logo} alt="logo" className="logo-icon" />
             </span>
@@ -65,15 +64,19 @@ const Header = () => {
 
           {isMenuOpen && (
             <div className="nav__menu">
-              <div className="nav__list__wrapper p-4 d-flex align-items-center gap-5" ref={menuRef}>
-
-                <div className="logo d-flex align-items-center justify-content-between ">
-                  <span className="d-flex align-items-center gap-1">
+              <div
+                className="nav__list__wrapper p-4 flex items-center gap-5"
+                ref={menuRef}
+              >
+                <div className="logo flex items-center justify-between">
+                  <span className="flex items-center gap-1">
                     <i className="ri-restaurant-2-line"></i>
                     <img src={logo} alt="logo" className="logo-icon" />
                   </span>
-                  <i className="ri-menu-line close-nav" onClick={menuToggle}></i>
-
+                  <i
+                    className="ri-menu-line close-nav"
+                    onClick={menuToggle}
+                  ></i>
                 </div>
 
                 <ul className="nav__list_mobile">
@@ -95,7 +98,6 @@ const Header = () => {
             ))}
           </ul>
 
-
           <div>
             <Link className="cart__icon" to={"/cart"}>
               <i className="ri-shopping-basket-line"></i>
@@ -109,7 +111,7 @@ const Header = () => {
             </span>
           </div>
         </div>
-      </Container>
+      </div>
     </header>
   );
 };

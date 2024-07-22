@@ -1,4 +1,3 @@
-
 .single__feature span {
   width: 50px;
   height: 50px;
@@ -8,6 +7,7 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 10px;
+  flex-shrink: 0;
 }
 
 .single__feature span i {
@@ -28,15 +28,15 @@
   font-size: 0.7rem;
 }
 
-.feature__icon-two {
+.single__feature:nth-child(2) span {
   background: var(--icon-1) !important;
 }
 
-.feature__icon-3 {
+.single__feature:nth-child(3) span {
   background: var(--website-6-color-2-light) !important;
 }
 
-.feature__icon-4 {
+.single__feature:nth-child(4) span {
   background: var(--icon-2) !important;
 }
 
@@ -60,12 +60,16 @@
   .single__feature p {
     font-size: 0.6rem;
   }
+
   .feature1 {
     flex-wrap: nowrap;
-  }}
+  }
+}
+
 .feature1 {
   flex-wrap: wrap;
 }
+
 .single__feature {
   width: 200px;
   flex-shrink: 0;

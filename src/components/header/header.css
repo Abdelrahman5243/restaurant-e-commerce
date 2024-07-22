@@ -22,7 +22,7 @@
 .nav__list {
   display: flex;
   align-items: center;
-  gap:35px;
+  gap: 35px;
   margin-bottom: 0;
   list-style: none;
 }
@@ -75,12 +75,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 5px;
 }
 
 .badge {
-  position: absolute;
-  top: -2px;
-  right: -3px;
   z-index: 12;
   color: var(--white);
   font-size: 0.8rem;
@@ -99,7 +97,7 @@
   list-style: none;
   width: 100%;
 }
-.logo i{
+.logo i {
   font-size: 24px;
 }
 

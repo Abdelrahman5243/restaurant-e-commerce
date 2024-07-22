@@ -2,39 +2,47 @@ import React from "react";
 import "./download.css";
 import { download } from "./downloadData";
 
-import { Container, Row, Col } from "reactstrap";
-
 const Download = () => {
   return (
     <section>
-      <Container className="app__container" id="Contact">
-        <Row>
-          <Col lg="6" md="6">
+      <div className="app__container container mx-auto px-8" id="Contact">
+        <div className="flex flex-wrap">
+          <div className="w-full md:w-1/2 mb-4 md:mb-0">
             <div className="app__img">
-              <img  loading="lazy" src={download.imgUrl} alt="" />
+              <img
+                loading="lazy"
+                src={download.imgUrl}
+                alt=""
+                className="w-full"
+              />
             </div>
-          </Col>
+          </div>
 
-          <Col lg="6" md="6">
+          <div className="w-full md:w-1/2">
             <div className="app__content">
-              <h5>{download.title}</h5>
-              <h2 className="mb-4">{download.description}</h2>
+              <h5 className="text-xl font-medium">{download.title}</h5>
+              <h2 className="mb-4 text-2xl font-bold">
+                {download.description}
+              </h2>
               <p>{download.info}</p>
 
-              <div className="app__btns d-flex align-items-center gap-5 mt-4">
-                <button className="btn__apple d-flex align-items-center gap-3">
-                  <i className="ri-apple-line"></i> <a href="https://www.apple.com/store">{download.Button.apple}</a>
+              <div className="app__btns flex items-center gap-5 mt-4">
+                <button className="btn__apple flex items-center gap-3">
+                  <i className="ri-apple-line"></i>
+                  <a href="https://www.apple.com/store">
+                    {download.Button.apple}
+                  </a>
                 </button>
 
-                <button className="btn__google d-flex align-items-center gap-3">
-                  <i className="ri-google-play-line"></i>{" "}
+                <button className="btn__google flex items-center gap-3">
+                  <i className="ri-google-play-line"></i>
                   <a href="https://play.google.com">{download.Button.google}</a>
                 </button>
               </div>
             </div>
-          </Col>
-        </Row>
-      </Container>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };

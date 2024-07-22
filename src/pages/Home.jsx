@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import Header from "../components/header/Header";
 import HeroSlider from "../components/hero-slider/HeroSlider";
 import PopularMenu from "../components/popular-menu/PopularMenu";
@@ -8,7 +8,7 @@ import Testimonials from "../components/testimonials/Testimonials";
 import Download from "../components/download-section/Download";
 const Home = () => {
   return (
-    <Fragment>
+    <>
       <Header />
       <HeroSlider />
       <PopularMenu />
@@ -16,7 +16,7 @@ const Home = () => {
       <MenuPack />
       <Testimonials />
       <Download />
-    </Fragment>
+    </>
   );
 };
 

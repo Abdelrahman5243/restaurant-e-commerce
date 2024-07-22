@@ -1,7 +1,5 @@
 import React from "react";
-import { Container } from "reactstrap";
 import Slider from "react-slick";
-
 import { sliderData } from "../../assets/fake-data/slider";
 import "./slider.css";
 
@@ -14,27 +12,33 @@ const HeroSlider = () => {
     autoplay: true,
     autoplaySpeed: 3000,
   };
+
   return (
     <section id="Home">
-      <Container>
+      <div className="container mx-auto px-8">
         <Slider {...settings}>
-          {sliderData.map((item,index) => (
+          {sliderData.map((item, index) => (
             <div key={index}>
-              <div className="slider__wrapper d-flex align-items-center justify-content-between pt-5">
-                <div className="slider__content w-50 ps-2">
-                  <h2 className="mb-3 ">{item.title}</h2>
+              <div className="slider__wrapper flex items-center justify-between pt-5">
+                <div className="slider__content w-1/2 px-2">
+                  <h2 className="mb-3">{item.title}</h2>
                   <p>{item.desc}</p>
                   <button className="btn">Explore Food</button>
                 </div>
 
-                <div className="slider__img w-50">
-                  <img  loading="lazy" src={item.imgUrl} alt="" className="w-100" />
+                <div className="slider__img w-1/2">
+                  <img
+                    loading="lazy"
+                    src={item.imgUrl}
+                    alt=""
+                    className="w-full"
+                  />
                 </div>
               </div>
             </div>
           ))}
         </Slider>
-      </Container>
+      </div>
     </section>
   );
 };

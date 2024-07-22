@@ -1,5 +1,4 @@
 import React from "react";
-import { Container, Row, Col } from "reactstrap";
 import "./testimonial.css";
 import { testimonialData } from "./testimonialData";
 
@@ -17,14 +16,16 @@ const Testimonials = () => {
   };
   return (
     <section className="design-6">
-      <Container>
-        <Row>
-          <Col lg="8" sm="12" md="12" className="m-auto">
-            <div className="slider__wrapper d-flex align-items-center gap-5  ">
-              <div className="slider__content w-50">
-                <h2 className="mb-4 ps-3">{testimonialData.title}</h2>
+      <div className="container mx-auto px-8">
+        <div className="flex flex-wrap justify-center">
+          <div className="w-full sm:w-11/12 md:w-11/12 lg:w-8/12 mx-auto">
+            <div className="slider__wrapper flex items-center gap-8">
+              <div className="slider__content w-1/2 px-3">
+                <h2 className="mb-4 text-2xl font-bold">
+                  {testimonialData.title}
+                </h2>
                 <Slider {...settings}>
-                  {testimonialData.cards.map((data , index) => (
+                  {testimonialData.cards.map((data, index) => (
                     <div key={index}>
                       <div className="single__testimonial">
                         <p className="review__content">{data.content}</p>
@@ -35,13 +36,18 @@ const Testimonials = () => {
                   ))}
                 </Slider>
               </div>
-              <div className="slider__img w-50">
-                <img  loading="lazy" src={testimonialData.imgUrl} alt="" className="w-100" />
+              <div className="slider__img w-1/2">
+                <img
+                  loading="lazy"
+                  src={testimonialData.imgUrl}
+                  alt=""
+                  className="w-full"
+                />
               </div>
             </div>
-          </Col>
-        </Row>
-      </Container>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };

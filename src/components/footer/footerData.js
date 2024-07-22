@@ -1,7 +1,7 @@
 export const footer = {
     logo: "Chef Food",
     description: "It is a long established fact that a reader will be distracted lookings.",
-    copyright: "copyright 2022, developed by ana. All rights reserved",
+    copyright: "developed by Abdelrahman Ragab. All rights reserved",
     infoLinks: {
       title: "Info Links",
       content: ["Terms & Conditions", "Privacy Policy", "Return & Refund", "Payment Method"],
