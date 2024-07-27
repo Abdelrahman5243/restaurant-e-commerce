@@ -69,12 +69,9 @@ const MenuPack = () => {
           </button>
         </div>
 
-        <div className="flex flex-wrap -mx-4">
+        <div className="grid xs:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
           {products.map((item, index) => (
-            <div
-              className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 mb-4 px-4"
-              key={index}
-            >
+            <div className="w-full mb-4 px-4" key={index}>
               <ProductCard item={item} />
             </div>
           ))}
