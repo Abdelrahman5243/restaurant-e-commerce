@@ -8,7 +8,7 @@ const Cart = () => {
   const navigate = useNavigate(); // Initialize navigate function
 
   // Calculate total price
-  const totalPrice = cartItems.reduce((total, item) => total + item.price, 0);
+  const totalPrice = cartItems.reduce((total, item) => total + item.price*item.quantity, 0);
 
   return (
     <div className="container mx-auto px-4">
@@ -29,7 +29,7 @@ const Cart = () => {
                 className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 mb-4 px-4"
                 key={index}
               >
-                <ProductCard item={item} />
+                <ProductCard item={item} isInCartPage="true" />
               </div>
             ))}
             <div className="w-full text-center mt-4 px-4">

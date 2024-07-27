@@ -1,5 +1,5 @@
 import sliderImg01 from "../images/slider1.png";
-import sliderImg02 from "../images/slider2.png";
+import sliderImg02 from "../images/chicken3.png";
 import sliderImg03 from "../images/slider03.png";
 
 export const sliderData = [

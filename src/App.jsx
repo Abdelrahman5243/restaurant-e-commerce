@@ -14,13 +14,12 @@ function App() {
   return (
     <>
       <Header />
-      <div style={{ margin: "105px 0", minHeight: "290px" }}>
+      <div className="my-28 min-h-screen">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/about" element={<ChooseUs />} />
-          <Route path="/menu" element={<PopularMenu />} />
-          <Route path="/recipes" element={<MenuPack />} />
+         <Route path="/menu" element={<><PopularMenu /><MenuPack /></>} />
           <Route path="/contact" element={<Download />} />
         </Routes>
       </div>

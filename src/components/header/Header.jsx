@@ -18,10 +18,6 @@ const navLinks = [
     url: "menu",
   },
   {
-    display: "Recipes",
-    url: "recipes",
-  },
-  {
     display: "Contact",
     url: "contact",
   },

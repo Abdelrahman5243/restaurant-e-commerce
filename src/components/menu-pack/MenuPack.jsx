@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import ProductCard from "../product-card/ProductCard";
 import {
   fastFoodProducts,
-  riceMenuProducts,
   pizzaProducts,
   dessertProducts,
   coffeeProducts,
@@ -11,12 +10,9 @@ import "./menu-pack.css";
 
 const MenuPack = () => {
   const [filter, setFilter] = useState("RICE-MENU");
-  const [products, setProducts] = useState(riceMenuProducts);
+  const [products, setProducts] = useState(fastFoodProducts);
 
   useEffect(() => {
-    if (filter === "RICE-MENU") {
-      setProducts(riceMenuProducts);
-    }
     if (filter === "FAST-FOOD") {
       setProducts(fastFoodProducts);
     }
@@ -48,14 +44,6 @@ const MenuPack = () => {
             onClick={() => setFilter("FAST-FOOD")}
           >
             Fast Food
-          </button>
-          <button
-            className={`filter-btn ${
-              filter === "RICE-MENU" ? "active__btn" : ""
-            } `}
-            onClick={() => setFilter("RICE-MENU")}
-          >
-            Rice Menu
           </button>
           <button
             className={`filter-btn ${filter === "PIZZA" ? "active__btn" : ""} `}
