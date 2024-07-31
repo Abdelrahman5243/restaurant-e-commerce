@@ -13,8 +13,9 @@ const PopularMenu = () => {
         <div className="grid xs:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
           {popularMenuFood.map((item, index) => (
             <div
-              className="w-full mb-4 px-4"
+              className="fade-in w-full mb-4 px-4"
               key={index}
+              style={{ "--i": index }}
             >
               <ProductCard item={item} />
             </div>
