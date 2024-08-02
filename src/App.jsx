@@ -14,16 +14,16 @@ function App() {
   return (
     <>
       <Header />
-      <div className="my-28 min-h-screen">
+      <div className="mt-24 flex flex-col justify-between">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/about" element={<ChooseUs />} />
-         <Route path="/menu" element={<><PopularMenu /><MenuPack /></>} />
+          <Route path="/menu" element={<MenuPack />} />
           <Route path="/contact" element={<Download />} />
         </Routes>
+        <Footer />
       </div>
-      <Footer />
     </>
   );
 }
