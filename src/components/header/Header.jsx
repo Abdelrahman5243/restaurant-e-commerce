@@ -59,7 +59,7 @@ const Header = () => {
           </NavLink>
 
           {isMenuOpen && (
-            <div className="nav__menu">
+            <div className="nav__menu flex md:hidden">
               <div
                 className="nav__list__wrapper p-4 flex items-center gap-5"
                 ref={menuRef}
@@ -112,7 +112,7 @@ const Header = () => {
             </NavLink>
           </div>
 
-          <div className="mobile__menu">
+          <div className="mobile__menu flex md:hidden">
             <span>
               <i className="ri-menu-line" onClick={menuToggle}></i>
             </span>
