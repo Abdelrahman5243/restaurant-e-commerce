@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useContext } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./header.css";
 import logo from "../../assets/images/logo.png";
 import CartContext from "../../context/CartContext";
@@ -51,12 +51,12 @@ const Header = () => {
     <header className="header">
       <div className="container mx-auto px-4">
         <div className="navigation">
-          <Link className="logo" to={"/"}>
+          <NavLink className="logo" to={"/"}>
             <span className="flex items-center gap-1">
               <i className="ri-restaurant-2-line"></i>
               <img src={logo} alt="logo" className="logo-icon" />
             </span>
-          </Link>
+          </NavLink>
 
           {isMenuOpen && (
             <div className="nav__menu">
@@ -78,9 +78,13 @@ const Header = () => {
                 <ul className="nav__list_mobile">
                   {navLinks.map((item, index) => (
                     <li className="nav__item" key={index}>
-                      <Link to={`/${item.url}`} onClick={menuToggle}>
+                      <NavLink
+                        to={`/${item.url}`}
+                        onClick={menuToggle}
+                        className={({ isActive }) => (isActive ? "active" : "")}
+                      >
                         {item.display}
-                      </Link>
+                      </NavLink>
                     </li>
                   ))}
                 </ul>
@@ -91,16 +95,21 @@ const Header = () => {
           <ul className="nav__list">
             {navLinks.map((item, index) => (
               <li className="nav__item" key={index}>
-                <Link to={`/${item.url}`}> {item.display}</Link>
+                <NavLink
+                  to={`/${item.url}`}
+                  className={({ isActive }) => (isActive ? "active" : "")}
+                >
+                  {item.display}
+                </NavLink>
               </li>
             ))}
           </ul>
 
           <div>
-            <Link className="cart__icon" to={"/cart"}>
+            <NavLink className="cart__icon" to={"/cart"}>
               <i className="ri-shopping-basket-line"></i>
               <span className="badge">{cartItems.length}</span>
-            </Link>
+            </NavLink>
           </div>
 
           <div className="mobile__menu">
