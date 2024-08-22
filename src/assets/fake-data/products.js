@@ -17,6 +17,7 @@ export const popularMenuFood = [
     price: 25,
     imgUrl: fastFood03,
     quantity: 1,
+    maxQuantity: 7,
   },
   {
     id: "02",
@@ -24,6 +25,7 @@ export const popularMenuFood = [
     price: 250,
     imgUrl: fastFood04,
     quantity: 1,
+    maxQuantity: 7,
   },
 
   {
@@ -32,6 +34,7 @@ export const popularMenuFood = [
     price: 45,
     imgUrl: dessert02,
     quantity: 1,
+    maxQuantity: 7,
   },
 
   {
@@ -40,6 +43,7 @@ export const popularMenuFood = [
     price: 75,
     imgUrl: pizzaImg01,
     quantity: 1,
+    maxQuantity: 7,
   },
 ];
 
@@ -50,6 +54,7 @@ export const fastFoodProducts = [
     price: 95,
     imgUrl: fastFood04,
     quantity: 1,
+    maxQuantity: 7,
   },
   {
     id: "06",
@@ -57,6 +62,7 @@ export const fastFoodProducts = [
     price: 250,
     imgUrl: fastFood04,
     quantity: 1,
+    maxQuantity: 7,
   },
   {
     id: "07",
@@ -64,6 +70,7 @@ export const fastFoodProducts = [
     price: 195,
     imgUrl: fastFood04,
     quantity: 1,
+    maxQuantity: 7,
   },
   {
     id: "08",
@@ -71,6 +78,7 @@ export const fastFoodProducts = [
     price: 275,
     imgUrl: fastFood04,
     quantity: 1,
+    maxQuantity: 7,
   },
   {
     id: "09",
@@ -78,6 +86,7 @@ export const fastFoodProducts = [
     price: 275,
     imgUrl: fastFood04,
     quantity: 1,
+    maxQuantity: 7,
   },
   {
     id: "10",
@@ -85,6 +94,7 @@ export const fastFoodProducts = [
     price: 95,
     imgUrl: fastFood04,
     quantity: 1,
+    maxQuantity: 7,
   },
   {
     id: "11",
@@ -92,6 +102,7 @@ export const fastFoodProducts = [
     price: 250,
     imgUrl: fastFood04,
     quantity: 1,
+    maxQuantity: 7,
   },
   {
     id: "12",
@@ -99,6 +110,7 @@ export const fastFoodProducts = [
     price: 195,
     imgUrl: fastFood04,
     quantity: 1,
+    maxQuantity: 7,
   },
 ];
 
@@ -109,6 +121,7 @@ export const dessertProducts = [
     price: 50,
     imgUrl: dessert03,
     quantity: 1,
+    maxQuantity: 7,
   },
   {
     id: "22",
@@ -116,6 +129,7 @@ export const dessertProducts = [
     price: 50,
     imgUrl: dessert02,
     quantity: 1,
+    maxQuantity: 7,
   },
   {
     id: "23",
@@ -123,6 +137,7 @@ export const dessertProducts = [
     price: 50,
     imgUrl: dessert03,
     quantity: 1,
+    maxQuantity: 7,
   },
   {
     id: "24",
@@ -130,6 +145,7 @@ export const dessertProducts = [
     price: 275,
     imgUrl: dessert04,
     quantity: 1,
+    maxQuantity: 7,
   },
   {
     id: "25",
@@ -137,6 +153,7 @@ export const dessertProducts = [
     price: 50,
     imgUrl: dessert03,
     quantity: 1,
+    maxQuantity: 7,
   },
   {
     id: "26",
@@ -144,6 +161,7 @@ export const dessertProducts = [
     price: 50,
     imgUrl: dessert02,
     quantity: 1,
+    maxQuantity: 7,
   },
   {
     id: "27",
@@ -151,6 +169,7 @@ export const dessertProducts = [
     price: 50,
     imgUrl: dessert03,
     quantity: 1,
+    maxQuantity: 7,
   },
   {
     id: "28",
@@ -158,6 +177,7 @@ export const dessertProducts = [
     price: 275,
     imgUrl: dessert04,
     quantity: 1,
+    maxQuantity: 7,
   },
 ];
 
@@ -168,6 +188,7 @@ export const pizzaProducts = [
     price: 95,
     imgUrl: pizzaImg01,
     quantity: 1,
+    maxQuantity: 7,
   },
   {
     id: "30",
@@ -175,6 +196,7 @@ export const pizzaProducts = [
     price: 95,
     imgUrl: pizzaImg01,
     quantity: 1,
+    maxQuantity: 7,
   },
   {
     id: "31",
@@ -182,6 +204,7 @@ export const pizzaProducts = [
     price: 95,
     imgUrl: pizzaImg01,
     quantity: 1,
+    maxQuantity: 7,
   },
   {
     id: "32",
@@ -189,6 +212,7 @@ export const pizzaProducts = [
     price: 95,
     imgUrl: pizzaImg01,
     quantity: 1,
+    maxQuantity: 7,
   },
   {
     id: "33",
@@ -196,6 +220,7 @@ export const pizzaProducts = [
     price: 95,
     imgUrl: pizzaImg01,
     quantity: 1,
+    maxQuantity: 7,
   },
   {
     id: "34",
@@ -203,6 +228,7 @@ export const pizzaProducts = [
     price: 95,
     imgUrl: pizzaImg01,
     quantity: 1,
+    maxQuantity: 7,
   },
 
   {
@@ -211,6 +237,7 @@ export const pizzaProducts = [
     price: 95,
     imgUrl: pizzaImg01,
     quantity: 1,
+    maxQuantity: 7,
   },
   {
     id: "36",
@@ -218,6 +245,7 @@ export const pizzaProducts = [
     price: 95,
     imgUrl: pizzaImg01,
     quantity: 1,
+    maxQuantity: 7,
   },
 ];
 
@@ -228,6 +256,7 @@ export const coffeeProducts = [
     price: 20,
     imgUrl: coffeeImg02,
     quantity: 1,
+    maxQuantity: 7,
   },
   {
     id: "38",
@@ -235,6 +264,7 @@ export const coffeeProducts = [
     price: 20,
     imgUrl: coffeeImg02,
     quantity: 1,
+    maxQuantity: 7,
   },
   {
     id: "39",
@@ -242,6 +272,7 @@ export const coffeeProducts = [
     price: 20,
     imgUrl: coffeeImg02,
     quantity: 1,
+    maxQuantity: 7,
   },
   {
     id: "40",
@@ -249,6 +280,7 @@ export const coffeeProducts = [
     price: 95,
     imgUrl: coffeeImg02,
     quantity: 1,
+    maxQuantity: 7,
   },
   {
     id: "41",
@@ -256,6 +288,7 @@ export const coffeeProducts = [
     price: 20,
     imgUrl: coffeeImg02,
     quantity: 1,
+    maxQuantity: 7,
   },
   {
     id: "42",
@@ -263,6 +296,7 @@ export const coffeeProducts = [
     price: 20,
     imgUrl: coffeeImg02,
     quantity: 1,
+    maxQuantity: 7,
   },
 
   {
@@ -271,6 +305,7 @@ export const coffeeProducts = [
     price: 20,
     imgUrl: coffeeImg02,
     quantity: 1,
+    maxQuantity: 7,
   },
   {
     id: "44",
@@ -278,5 +313,6 @@ export const coffeeProducts = [
     price: 95,
     imgUrl: coffeeImg02,
     quantity: 1,
+    maxQuantity: 7,
   },
 ];
