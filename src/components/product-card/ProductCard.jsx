@@ -1,19 +1,36 @@
 import React, { useContext } from "react";
+import { toast } from "react-toastify"; // Import toast
 import "./product-card.css";
 import CartContext from "../../context/CartContext";
 
 const ProductCard = (props) => {
   const { title, imgUrl, price, id, quantity } = props.item;
-  const isInCartPage = props.isInCartPage ;
-  const { addItem, removeItem, increaseQuantity, decreaseQuantity, cartItems } = useContext(CartContext);
+  const isInCartPage = props.isInCartPage;
+  const { addItem, removeItem, increaseQuantity, decreaseQuantity, cartItems } =
+    useContext(CartContext);
 
   // Check if the item is in the cart
   const isInCart = cartItems.some((item) => item.id === id);
 
+  const handleCartAction = () => {
+    if (isInCart) {
+      removeItem(id);
+      toast.info(`${title} removed from cart`);
+    } else {
+      addItem(props.item);
+      toast.success(`${title} added to cart`);
+    }
+  };
+
   return (
     <div className="single__product">
       <div className="product__img">
-        <img loading="lazy" src={imgUrl} alt={title} className="w-full max-h-[190px]" />
+        <img
+          loading="lazy"
+          src={imgUrl}
+          alt={title}
+          className="w-full max-h-[190px]"
+        />
       </div>
 
       <div className="product__content">
@@ -31,20 +48,18 @@ const ProductCard = (props) => {
           </div>
         )}
 
-
         <h6 className="text-lg font-semibold my-4">{title}</h6>
 
         <div className="flex items-center justify-between">
           <span className="price flex items-center">
-            Price: £<span>{price*quantity}</span>
+            Price: £<span>{price * quantity}</span>
           </span>
-          <button
-            className="shopping__icon"
-            onClick={() => {
-              isInCart ? removeItem(id) : addItem(props.item);
-            }}
-          >
-            <i className={isInCart ? "ri-delete-bin-line" : "ri-shopping-cart-line"}></i>
+          <button className="shopping__icon" onClick={handleCartAction}>
+            <i
+              className={
+                isInCart ? "ri-delete-bin-line" : "ri-shopping-cart-line"
+              }
+            ></i>
           </button>
         </div>
       </div>

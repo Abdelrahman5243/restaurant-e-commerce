@@ -4,23 +4,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap");
 
 /* ======== base style ======= */
-:root{
-  --website-6-color-1-dark:#0a071a;
-  --website-6-color-1-light:#141124;
-  --website-6-color-2-dark:#f76e11;
-  --website-6-color-2-light:#f5b70a;
+:root {
+  --website-6-color-1-dark: #0a071a;
+  --website-6-color-1-light: #141124;
+  --website-6-color-2-dark: #f76e11;
+  --website-6-color-2-light: #f5b70a;
   --black: #000;
-  --white:#fff;
-  --gray:#c4c4c4;
-  --icon-1:#2ace92;
-  --icon-2:#7865ff;
-  }
+  --white: #fff;
+  --gray: #c4c4c4;
+  --icon-1: #2ace92;
+  --icon-2: #7865ff;
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -63,11 +63,17 @@ i {
     padding: 40px 0px;
   }
 }
-.logo-icon{
+.logo-icon {
   width: 120px;
 }
 
-button:not(.filter-btn,.slick-arrow,.btn__google,.btn__apple) {
+button:not(
+    .filter-btn,
+    .slick-arrow,
+    .btn__google,
+    .btn__apple,
+    .Toastify__close-button
+  ) {
   border-radius: 8px;
   padding: 0.6em 1.2em;
   font-size: 1em;
@@ -75,16 +81,16 @@ button:not(.filter-btn,.slick-arrow,.btn__google,.btn__apple) {
   font-family: inherit;
   transition: border-color 0.25s;
   outline: none;
-  box-shadow: none; 
-  border: none; 
+  box-shadow: none;
+  border: none;
   background: var(--website-6-color-2-dark);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   &:hover {
-  background: var(--website-6-color-2-light);
-}
+    background: var(--website-6-color-2-light);
+  }
 }
 
 .fade-in {
@@ -97,4 +103,17 @@ button:not(.filter-btn,.slick-arrow,.btn__google,.btn__apple) {
   to {
     opacity: 1;
   }
+}
+
+.Toastify__toast {
+  background: var(--icon-1) !important;
+  color: white !important;
+}
+
+.Toastify__toast--success {
+  background: #31e7a4 !important;
+}
+
+.Toastify__toast--info {
+  background: #f73411 !important;
 }
