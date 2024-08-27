@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import { toast } from "react-toastify"; // Import toast
 import "./product-card.css";
 import CartContext from "../../context/CartContext";
 
@@ -15,10 +14,8 @@ const ProductCard = (props) => {
   const handleCartAction = () => {
     if (isInCart) {
       removeItem(id);
-      toast.info(`${title} removed from cart`);
     } else {
       addItem(props.item);
-      toast.success(`${title} added to cart`);
     }
   };
 
