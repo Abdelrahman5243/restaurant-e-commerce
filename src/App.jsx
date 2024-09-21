@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Header from "./components/header/Header";
-import PopularMenu from "./components/popular-menu/PopularMenu";
 import ChooseUs from "./components/choose-us/ChooseUs";
 import MenuPack from "./components/menu-pack/MenuPack";
 import Download from "./components/download-section/Download";
